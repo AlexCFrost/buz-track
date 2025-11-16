@@ -32,13 +32,13 @@ const getAIGeneratedContent = async (prompt: string, location?: GeolocationCoord
             },
         });
         
-        const text = response.text;
+        const text = response.text || '';
         const sources: GroundingSource[] = [];
         
         const groundingChunks = response.candidates?.[0]?.groundingMetadata?.groundingChunks;
         if (groundingChunks) {
             for (const chunk of groundingChunks) {
-                if(chunk.maps) {
+                if(chunk.maps && chunk.maps.uri && chunk.maps.title) {
                     sources.push({
                         uri: chunk.maps.uri,
                         title: chunk.maps.title
