@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #374151;
+}
+
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-default-icon-path {
+  display: none;
+}
+
+.leaflet-tile-container img {
+  max-width: none !important;
+}
+
+.leaflet-tile {
+  max-width: none !important;
+}
