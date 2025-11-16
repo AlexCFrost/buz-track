@@ -1,8 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd bee-app && pnpm install && pnpm build",
-  "devCommand": "cd bee-app && pnpm dev",
-  "installCommand": "cd bee-app && pnpm install",
-  "framework": "nextjs",
-  "outputDirectory": "bee-app/.next"
-}
